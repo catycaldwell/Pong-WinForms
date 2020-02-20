@@ -36,6 +36,7 @@
             this.Scoreboard = new System.Windows.Forms.Label();
             this.UpdateScore = new System.Windows.Forms.Timer(this.components);
             this.BallMovement = new System.Windows.Forms.Timer(this.components);
+            this.labelVictory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
@@ -44,7 +45,7 @@
             // Player1
             // 
             this.Player1.BackgroundImage = global::PongWinForms.Properties.Resources.PlayerGraphics;
-            this.Player1.Location = new System.Drawing.Point(12, 374);
+            this.Player1.Location = new System.Drawing.Point(12, 206);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(16, 72);
             this.Player1.TabIndex = 0;
@@ -53,7 +54,7 @@
             // Player2
             // 
             this.Player2.BackgroundImage = global::PongWinForms.Properties.Resources.PlayerGraphics;
-            this.Player2.Location = new System.Drawing.Point(772, 177);
+            this.Player2.Location = new System.Drawing.Point(772, 206);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(16, 72);
             this.Player2.TabIndex = 1;
@@ -99,17 +100,32 @@
             this.BallMovement.Interval = 1;
             this.BallMovement.Tick += new System.EventHandler(this.BallMovement_Tick);
             // 
+            // labelVictory
+            // 
+            this.labelVictory.AutoSize = true;
+            this.labelVictory.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelVictory.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVictory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelVictory.Location = new System.Drawing.Point(134, 205);
+            this.labelVictory.Name = "labelVictory";
+            this.labelVictory.Size = new System.Drawing.Size(558, 73);
+            this.labelVictory.TabIndex = 4;
+            this.labelVictory.Text = "Player 1 has won!";
+            this.labelVictory.Visible = false;
+            // 
             // Pong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 446);
+            this.Controls.Add(this.labelVictory);
             this.Controls.Add(this.Scoreboard);
             this.Controls.Add(this.Ball);
             this.Controls.Add(this.Player2);
             this.Controls.Add(this.Player1);
             this.Name = "Pong";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Pong_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).EndInit();
@@ -128,6 +144,7 @@
         private System.Windows.Forms.Label Scoreboard;
         private System.Windows.Forms.Timer UpdateScore;
         private System.Windows.Forms.Timer BallMovement;
+        private System.Windows.Forms.Label labelVictory;
     }
 }
 
