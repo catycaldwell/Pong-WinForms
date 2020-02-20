@@ -1,19 +1,13 @@
 # WinForms Pong
 > A simple pong game based off the 1972 ATARI pong game for the arcade.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 WinForms Pong is a simple project of mine done as to increase my understanding not only of winforms but also of C# in general. Although I have previously worked in more complex projects, I feel like it is polished enough as to make it my first public repository.
 
-![](https://i.imgur.com/lcJjcOK.gifv)
+![](header.gif)
 
 ## Usage example
 
 WinForms Pong can be used as a fun little game for two players or also as project to learn from for those just starting with C# or programming in general.
-
-![](https://i.imgur.com/809g7uj.jpg)
 
 ## Release History
 
