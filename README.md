@@ -11,6 +11,8 @@ WinForms Pong can be used as a fun little game for two players or also as projec
 
 ## Release History
 
+* 0.2.1
+    * ADD: Prompt to restart the game
 * 0.2.0
     * ADD: Control customization
     * ADD: Win score customization
