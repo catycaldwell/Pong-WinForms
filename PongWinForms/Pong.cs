@@ -60,6 +60,7 @@ namespace PongWinForms
             if(player1.Score >= ScoreToWin)
             {
                 BallMovement.Stop();
+                btnRestart.Visible = true;
                 labelVictory.Visible = true;
                 labelVictory.Text = "Player 1 has won!";
             }
@@ -67,6 +68,7 @@ namespace PongWinForms
             if (player2.Score >= ScoreToWin)
             {
                 BallMovement.Stop();
+                btnRestart.Visible = true;
                 labelVictory.Visible = true;
                 labelVictory.Text = "Player 2 has won!";
             }
@@ -83,6 +85,29 @@ namespace PongWinForms
         private void Pong_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            // Hide victory text and button
+            labelVictory.Visible = false;
+            btnRestart.Visible = false;
+            Pong.ActiveForm.Focus();
+
+            // Revert the scores back to 0
+            player1.RestartScore();
+            player2.RestartScore();
+
+            // Start ball movemenet and restart its position
+            ball.Reset();
+            BallMovement.Start();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ball.Move();
+            ball.IsOutOfBounds(player1, player2);
+            ball.OnCollision(player1, player2);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace PongWinForms
             BallGraphic.Top = DefaultY;
 
             // Reset speed
-            Speed = 1;
+            Speed = 2;
         }
 
         /// <summary>

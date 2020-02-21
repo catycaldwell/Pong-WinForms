@@ -37,6 +37,7 @@
             this.UpdateScore = new System.Windows.Forms.Timer(this.components);
             this.BallMovement = new System.Windows.Forms.Timer(this.components);
             this.labelVictory = new System.Windows.Forms.Label();
+            this.btnRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
@@ -106,18 +107,30 @@
             this.labelVictory.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelVictory.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVictory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelVictory.Location = new System.Drawing.Point(134, 205);
+            this.labelVictory.Location = new System.Drawing.Point(133, 146);
             this.labelVictory.Name = "labelVictory";
             this.labelVictory.Size = new System.Drawing.Size(558, 73);
             this.labelVictory.TabIndex = 4;
             this.labelVictory.Text = "Player 1 has won!";
             this.labelVictory.Visible = false;
             // 
+            // btnRestart
+            // 
+            this.btnRestart.Location = new System.Drawing.Point(373, 242);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnRestart.TabIndex = 5;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Visible = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
             // Pong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 446);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.labelVictory);
             this.Controls.Add(this.Scoreboard);
             this.Controls.Add(this.Ball);
@@ -145,6 +158,7 @@
         private System.Windows.Forms.Timer UpdateScore;
         private System.Windows.Forms.Timer BallMovement;
         private System.Windows.Forms.Label labelVictory;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

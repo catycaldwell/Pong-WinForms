@@ -56,5 +56,10 @@ namespace PongWinForms
         {
             Score++;
         }
+
+        public void RestartScore()
+        {
+            Score = 0;
+        }
     }
 }
